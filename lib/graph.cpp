@@ -15,8 +15,9 @@ Graph::~Graph() {
 		it != edges.end(); ++it) {
 		Edge *edge = *it;
 		while (edge) {
-			delete edge;
+			Edge *temp = edge;
 			edge = edge->next;
+			delete temp;
 		}
 	}
 }
