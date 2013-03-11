@@ -1,14 +1,6 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 #include <vector>
-class Node {
-friend class Graph;
-private:
-	Node(int v, int d, Node* n) : vertex(v), dist(d), next(n) {}
-	int vertex;
-	int dist;
-	Node *next;
-};
 
 struct Edge {
 	int vertex;
@@ -25,6 +17,7 @@ private:
 public: 
 	Graph(int, int);
 	~Graph();
+	int size() const;
 //	Graph(int n, int max) : dimension(n), INF(max) {
 //		edges = new Node*[n];
 //		for (int i = 0; i < n; i++) {

@@ -68,3 +68,6 @@ void Graph::print() const {
 
 }
 
+int Graph::size() const {
+	return N;
+}
