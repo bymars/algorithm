@@ -11,8 +11,7 @@ PRIM = prim/main.o lib/graph.o
 
 EXE_FLODER = executable
 
-nop :
-	@echo "which target do you want to make? :)"
+test: main
 
 dijkstra : $(DIJKSTRA)
 	$(LD) $(LDFLAGS) -o $(EXE_FLODER)/$@ $(DIJKSTRA)
@@ -39,4 +38,7 @@ prim/main.o : prim/main.cpp include/graph.h
 	$(CC) $(CFLAGS) -o $@ $<
 
 lib/graph.o : lib/graph.cpp include/graph.h
+	$(CC) $(CFLAGS) -o $@ $<
+
+lib/binarysearch.o : lib/binarysearch.cpp include/binarysearch.h
 	$(CC) $(CFLAGS) -o $@ $<

@@ -1,10 +1,13 @@
 #ifndef BIGINT_H
 #define BIGINT_H
+#include <iostream>
 class BigInt {
+
+friend const BigInt& operator+(const BigInt&, const BigInt&);
 public:
-	
+	BigInt(const std::string&);
 private:
-	long value[10];
+	int value[20];
 	int pointer;
 	int length;
 };
